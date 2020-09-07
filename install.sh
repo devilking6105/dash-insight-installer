@@ -11,7 +11,7 @@ mkdir -p $dash_prefix
 
 # don't try to reinstall dashd if it's already installed
 if [ ! -f /opt/dashpay/bin/dashd ]; then
-  git clone --depth 1 https://github.com/dashhive/dashd-installer.sh.git
+  git clone --depth 1 https://github.com/devilking6105/dashd-installer.sh.git
   pushd dashd-installer.sh
     source install.sh
   popd
@@ -30,7 +30,7 @@ export PATH=$dash_prefix/bin:$PATH
 echo $NODE_VERSION > /tmp/NODEJS_VER
 curl -fsSL bit.ly/node-installer | bash -s -- --no-dev-deps
 
-git clone --depth 1 https://github.com/dashevo/bitcore-node-dash $dash_prefix/bitcore -b skip-dash-download
+git clone --depth 1 https://github.com/devilking6105/dashcore-node $dash_prefix/bitcore -b skip-dash-download
 
 pushd $dash_prefix/bitcore
   fallocate -l 2G ./tmp.swap

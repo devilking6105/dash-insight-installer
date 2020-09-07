@@ -12,7 +12,7 @@ mkdir -p $helpthehomeless_prefix
 # don't try to reinstall dashd if it's already installed
 if [ ! -f /opt/helpthehomeless/bin/helpthehomelessd ]; then
   git clone --depth 1 https://github.com/devilking6105/dashd-installer.git
-  pushd dashd-installer.sh
+  pushd dashd-installer
     source install.sh
   popd
 else
